@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
+    <title>The 1893 Chicago World Fair - Foods</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            box-sizing: border-box;
+            background-color: #fff;
+            overflow-x: hidden;
+            overflow-y: inherit;
+        }
+
+        header {
+            background: linear-gradient(to bottom, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 90%, rgba(0, 0, 0, 0) 100%);
+            display: flex;
+            width: 100%;
+            height: 200px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 50px;
+            color: white;
+        }
+
+        .title {
+            width: 100%;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            width: 100%;
+            height: fit-content;
+            margin-top: 30px;
+            padding: 10px;
+        }
+
+        .container:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .image {
+            flex: 1;
+            padding: 10px;
+            height: 100%;
+        }
+
+        .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .description {
+            flex: 1;
+            padding: 10px;
+            text-align: left;
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            margin-top: 30px;
+            text-indent: 30px;
+            line-height: 2;
+        }
+
+        .description b {
+            margin-left: 10px;
+            font-size: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .container:nth-child(even) {
+                flex-direction: column;
+            }
+
+            .image, .description {
+                height: auto;
+            }
+
+            .image img {
+                height: fit-content;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Foods at the Fair</h1>
+    </header>
+    <br><br><br>
+    <div class="title">Cracker Jack</div>
+    <div class="container">
+        <div class="image">
+            <img src="https://www.thoughtco.com/thmb/CqVy_oOJCz4Y0qxRLLw0TYLC2Dk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/15261437581_5494b03c68_k-8a5783c7382042c3a912fbe45bff1bfd.jpg" alt="Cracker Jack">
+        </div>
+        <div class="description">
+            <b>Cracker Jack was a very popular snack and consisted of molasses-coated popcorn and peanuts invented by German immigrants Frederick William Rueckheim and his brother Louis. It was introduced at the 1893 World's Fair and became an instant hit due to its sweet and salty flavor.</b>
+        </div>
+    </div>
+    <br>
+    <div class="title">Aunt Jemima Pancake Mix</div>
+    <div class="container">
+        <div class="image">
+            <img src="https://media.gettyimages.com/id/1250298406/photo/san-rafael-california-boxes-of-aunt-jemima-pancake-mix-are-displayed-on-a-shelf-at-scottys.jpg?s=612x612&w=0&k=20&c=Czjq1bRsFi80GiAtv64xOx-O7pIQdA2gmmG8Va5bIB4=" alt="Aunt Jemima Pancake Mix">
+        </div>
+        <div class="description">
+            <b>Aunt Jemima Pancake Mix, introduced at the fair, was one of the first ready-made pancake products. It changed the food industry by offering a quick and easy solution for making pancakes. It later rebranded to Pearl Milling Company, but is still a very popular pancake mix today.</b>
+        </div>
+    </div>
+    <br>
+    <div class="title">Hot Dogs</div>
+    <div class="container">
+        <div class="image">
+            <img src="https://moderndaytimetraveler.com/wp-content/uploads/2021/08/F56FCDC3-BA73-402C-BC5F-26F729442782-1024x1024.jpg" alt="Hot Dog">
+        </div>
+        <div class="description">
+            <b>Hot dogs were introduced at the fair and are now a very significant part of the American culture along with the Burger that was also introduced at the fair. They were served on buns and became a popular snack at the event.</b>
+        </div>
+    </div>
+    <br>
+    <div class="title">Brownies</div>
+    <div class="container">
+        <div class="image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQznQHhb2c__Q3g_jlVmidwjXCGJGFR-Mmj0Q&s" alt="Brownies">
+        </div>
+        <div class="description">
+            <b>Brownies were invented by Bertha Palmer for the fair. They were created as a portable, easy-to-eat dessert for people attending the fair.</b>
+        </div>
+    </div>
+    <br>
+    <div class="title">Cream of Wheat</div>
+    <div class="container">
+        <div class="image">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Cream_of_Wheat_old_cereal_box.jpg/170px-Cream_of_Wheat_old_cereal_box.jpg" alt="Cream of Wheat">
+        </div>
+        <div class="description">
+            <b>Cream of Wheat was first introduced at the fair and was quickly very popular at the fair. It is made from ground wheat and is still a popular cereal today.</b>
+        </div>
+    </div>
+</body>
+</html>
