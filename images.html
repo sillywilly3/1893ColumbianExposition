@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
+    <title>The 1893 Chicago World Fair - Pictures of the Fair</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            box-sizing: border-box;
+            background-color: #fff;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: linear-gradient(to bottom, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 90%, rgba(0, 0, 0, 0) 100%);
+            display: flex;
+            width: 100%;
+            height: 200px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 50px;
+            color: white;
+        }
+
+        h2 {
+            width: 100%;
+            text-align: center;
+        }
+
+        .title {
+            width: 100%;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            width: 100%;
+            height: fit-content;
+            margin-top: 30px;
+            padding: 10px;
+        }
+
+        .container:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .image {
+            flex: 1;
+            padding: 10px;
+            height: 100%;
+        }
+
+        .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .description {
+            flex: 1;
+            padding: 10px;
+            text-align: left;
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            margin-top: 30px;
+            text-indent: 30px;
+            line-height: 2;
+        }
+
+        .description b {
+            margin-left: 10px;
+            font-size: 20px;
+        }
+
+        .state-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 10px;
+            margin-top: 30px;
+            width: 90%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .state-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 10px;
+        }
+
+        .night-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+            gap: 20px;
+            padding: 10px;
+            margin-top: 30px;
+            width: 100%; 
+            justify-items: center; 
+            align-items: center; 
+        }
+
+        .night-grid img {
+            width: 100%; 
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .container:nth-child(even) {
+                flex-direction: column;
+            }
+
+            .image, .description {
+                height: auto;
+            }
+
+            .image img {
+                height: fit-content;
+            }
+
+            .state-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .main-building-img img{
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .natural_features img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pictures of the Fair</h1>
+    </header>
+    <br><br><br>
+    <div class="title">The Midway Plaisance</div>
+    <div class="container">
+        <div class="image">
+            <img src="https://smarthistory.org/wp-content/uploads/2021/07/091.png" alt="The Midway Plaisance">
+        </div>
+        <div class="description">
+            <b>Located along the southern edge of the fairgrounds, the Midway was a vibrant entertainment zone with exotic exhibits, amusements, and cultural displays. It featured attractions like the Ferris Wheel, a replica of a Cairo street, and various sideshows, giving visitors a chance to experience the world’s diversity and entertain themselves with thrilling rides.</b>
+        </div>
+    </div>
+    <br>
+    <div class="title">The White City</div>
+    <div class="container">
+        <div class="image">
+            <img src="https://the1893worldsfair.weebly.com/uploads/1/6/0/7/16074070/4107863.jpg" alt="The White City">
+        </div>
+        <div class="description">
+            <b>The White City, the central area of the fair, featured traditional architecture and symbolized American progress and industry. The buildings, constructed in white cement, were designed by famous architects like Daniel Burnham and featured grand, classical facades. The area was home to the fair’s most impressive structures, including the first Ferris Wheel.</b>
+        </div>
+    </div>
+    <br>
+    <div class="title">State Buildings</div>
+    <div class="description">
+        <b>Each state in the U.S. had its own pavilion at the fair, showcasing its resources, culture, and contributions to the nation. These buildings were designed to reflect each state's character, featuring displays on agriculture, industry, and local history. Displayed below in order are pictures of the Missouri State Building, the Pennsylvania State Building, the Michigan State Building, the Illinois State Building, the California State Building, and the New York State Building.</b>
+    </div>
+    <div class="state-grid">
+        <img src="https://worldsfairchicago1893.com/wp-content/uploads/2022/04/Missouri-State-Building.jpg" alt="Missouri State Building">
+        <img src="https://worldsfairchicago1893.com/wp-content/uploads/2022/04/Pennsylvania-State-Building.jpg" alt="Pennsylvania State Building">
+        <img src="https://worldsfairchicago1893.com/wp-content/uploads/2022/04/Michigan-State-Building.jpg" alt="Michigan State Building">
+        <img src="https://worldsfairchicago1893.com/wp-content/uploads/2022/04/Illinois-State-Building.jpg" alt="Illinois State Building">
+        <img src="https://worldsfairchicago1893.com/wp-content/uploads/2022/04/California-State-Building.jpg" alt="California State Building">
+        <img src="https://worldsfairchicago1893.com/wp-content/uploads/2022/04/New-York-State-Building.jpg" alt="New-York-State-Building">
+    </div>
+    <br>
+    <div class="title">Foreign Buildings</div>
+    <div class="container">
+        <div class="image">
+            <img src="https://worldsfairchicago1893.com/wp-content/uploads/2022/04/Japan-e1651367081143.jpg" alt="Foreign Buildings">
+        </div>
+        <div class="description">
+            <b>Each foreign nation at the 1893 World's Columbian Exposition had its own pavilion, showcasing its culture, art, and innovations. These buildings were designed to reflect each country's architectural style. These exhibits highlighted the nation's achievements in areas such as industry, agriculture, and science. The countries with their own building included France, Italy, Germany, Japan, Britain, Egypt. Japan's building is displayed to the right.</b>
+        </div>
+    </div>
+
+    <br><br><br>
+    <div class="main-building-img">
+    <div class="title">Main Buildings of the 1893 World's Fair</div>
+    <div class="container">
+        <div class="image">
+            <img src="https://digital.lib.umd.edu/worldsfairs/binaries/content/gallery/worlds-fairs/imgs/umd:11326.jpg" alt="Administration Building">
+        </div>
+        <div class="description">
+            <b>The Administration Building, designed by Richard Morris Hunt, served as the central office of the fair with its iconic dome.</b>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="image">
+            <img src="https://chicagology.com/wp-content/themes/revolution-20/columbian/picturesquechicagowesternentranceartpalace.jpg" alt="Palace of Fine Arts">
+        </div>
+        <div class="description">
+            <b>The Palace of Fine Arts, designed by Charles B. Atwood, showcased art and is now the Museum of Science and Industry.</b>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="image">
+            <img src="https://chicagology.com/wp-content/themes/revolution-20/columbian/manufacturesbldgcolorkeys.jpg" alt="Manufactures and Liberal Arts Building">
+        </div>
+        <div class="description">
+            <b>The Manufactures and Liberal Arts Building, designed by George B. Post, was the largest building at the fair, displaying global goods.</b>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="image">
+            <img src="https://chicagology.com/wp-content/themes/revolution-20/columbian/picturesquechicagodomeofagriculturebuilding.jpg" alt="Agricultural Building">
+        </div>
+        <div class="description">
+            <b>The Agricultural Building, designed by McKim, Mead & White, displayed farming tools and even had a giant fruit-made Liberty Bell.</b>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="image">
+            <img src="https://chicagology.com/wp-content/themes/revolution-20/columbian/picturesquechicagotransporationbuilding.jpg" alt="Transportation Building">
+        </div>
+        <div class="description">
+            <b>The Transportation Building, designed by Louis Sullivan, stood out with its colorful design and famous “Golden Door.”</b>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="image">
+            <img src="https://chicagology.com/wp-content/themes/revolution-20/columbian/picturesquechicagomachineryhalleasternportal.jpg" alt="Machinery Hall">
+        </div>
+        <div class="description">
+            <b>Machinery Hall, designed by Peabody & Stearns, housed engines and machines that powered the fair.</b>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="image">
+            <img src="https://chicagology.com/wp-content/themes/revolution-20/columbian/picturesquechicagofisheriesbuilding.jpg" alt="Fisheries Building">
+        </div>
+        <div class="description">
+            <b>The Fisheries Building, designed by Henry Ives Cobb, featured live fish displays and bright decorative tiles.</b>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="image">
+            <img src="https://chicagology.com/wp-content/themes/revolution-20/columbian/picturesquechicagoentranceelectricitybuilding.jpg" alt="Electricity Building">
+        </div>
+        <div class="description">
+            <b>The Electricity Building, designed by Charles B. Atwood, showed off new electrical inventions and amazing light displays.</b>
+        </div>
+    </div>
+
+    <br><br><br>
+    <div class="title">The Fair At Night</div>
+    <div class="night-grid">
+        <img src="https://worldsfairchicago1893.com/wp-content/uploads/2019/01/Court-of-Honor-at-night-Johnson.jpg" alt="nightimg_1">
+        <img src="https://worldsfairchicago1893.com/wp-content/uploads/2021/06/121.-Picturesque-World_s-Fair-The-Grand-Basin-at-Night-Showing-Search-Lights.jpg" alt="nightimg_2">
+        <img src="https://worldsfairchicago1893.com/wp-content/uploads/2020/11/Grand-Court-at-Night-Harpers-Weekly-18930624.jpg" alt="nightimg_3">
+    </div>
+
+    <br><br><br>
+    <div class="title">Inside the Buildings</div>
+    <div class="container">
+        <div class="image">
+            <img src="https://chicagology.com/wp-content/themes/revolution-20/columbian/palacefineartsint.jpg" alt="insideimg_1">
+        </div>
+        <div class="description">
+            <b>This is a picture of the interior of the Palace of Fine Arts displaying sculptures, paintings, and replicas of buildings</b>
+        </div>
+    </div>
+    <div class="container">
+        <div class="image">
+            <img src="https://worldsfairchicago1893.com/wp-content/uploads/2022/10/144.-Picturesque-Worlds-Fair-Interior-of-the-Electricity-Building.jpg" alt="insideimg_2">
+        </div>
+        <div class="description">
+            <b>This is a picture of the interior of the Electricity Building that displayed big electric generators that also powered teh entire fair.</b>
+        </div>
+    </div>
+    <div class="container">
+        <div class="image">
+            <img src="https://worldsfairchicago1893.com/wp-content/uploads/2019/10/88.-Picturesque-World_s-Fair-Interior-of-Machinery-Hall.jpg" alt="insideimg_3">
+        </div>
+        <div class="description">
+            <b>This is a picture of the interior of the Hall of Machinery that displayed advancements in American Technology.</b>
+        </div>
+    </div>
+    <div class="container">
+        <div class="image">
+            <img src="https://www.idaillinois.org/digital/iiif/fmnh/299/full/full/0/default.jpg" alt="insideimg_5">
+        </div>
+        <div class="description">
+            <b>Another image inside of the Hall of Machinery from a different perspective</b>
+        </div>
+    </div>
+    <div class="container">
+        <div class="image">
+            <img src="https://ecuip.lib.uchicago.edu/diglib/social/worldsfair_1893/gallery/images/07-11b_transportation.jpg" alt="insideimg_4">
+        </div>
+        <div class="description">
+            <b>This is a picture of the interior of the transportation building that displayed advancements in transportation.</b>
+        </div>
+    </div>
+
+    <br><br><br>
+    <div class="title">Midway Attractions</div>
+    <div class="night-grid">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Original_Ferris.jpeg/250px-Original_Ferris.jpeg" alt="img_1">
+        <img src="https://worldsfairchicago1893.com/wp-content/uploads/2019/01/Ice-Railway-Art-History.jpg" alt="img_2">
+        <img src="https://tile.loc.gov/storage-services/service/pnp/ds/05100/05104v.jpg#h=1024&w=840" alt="img_3">
+    </div>
+
+    <br><br><br>
+    <div class="title">Natural Features of the Fair</div>
+    <div>
+        <div class="description">
+            <b>The natural features of the fair were designed by  landscape architect Frederick Law Olmsted. The fairgrounds featured lagoons,  gardens, and the  Wooded Island, which gave people a peaceful place to go while the big loud fair was happening. These natural features were designed to go with the architecture of the fair to make it nice to look at too.</b>
+        </div>
+        <img class="natural_features" src="https://www.nps.gov/frla/learn/historyculture/images/ala.jpg?maxwidth=650&autorotate=false&quality=78&format=webp" alt="natural features of the fair img">
+    </div>
+    <br><br>
+    <h2>I guess this is the end</h2>
+    <br><br>
+</body>
+</html>
