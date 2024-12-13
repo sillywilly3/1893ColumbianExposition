@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
+    <title>The 1893 Chicago World Fair</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            overflow-x: hidden;
+            background: linear-gradient(to bottom, rgba(22, 22, 22, 1), rgba(91, 91, 91, 0.8), rgba(91, 91, 91, 0));
+            background-color: rgba(91, 91, 91, 0.8);
+            background-attachment: fixed; 
+            height: 200vh; 
+            transition: 0.3s ease;
+        }
+
+        header {
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 200px; 
+            top: 0;
+            z-index: 1000;
+            color: rgb(255, 255, 255);
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 50px;
+            margin: 0;
+        }
+
+        header p {
+            margin: 10px 0 0; 
+            font-size: 16px;
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        main {
+            margin-top: 220px;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            height: 100vh;
+        }
+
+        main span.catSpan {
+            font-size: 50px;
+            color: rgb(255, 255, 255); 
+            text-align: center;
+            width: 100%;
+            transition: color 0.3s ease; 
+        }
+
+        main div {
+            display: flex;
+            margin: 20px 10px;
+            height: 500px;
+            width: calc(50% - 40px);
+            background: rgb(0, 0, 0);
+            border-radius: 12px;
+            cursor: pointer;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        main div img {
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+            transition: filter 0.7s ease; 
+        }
+
+        main div::before {
+            content: attr(alt);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 50px;
+            font-weight: bold;
+            opacity: 0;
+            transition: opacity 0.7s ease-in-out;
+            z-index: 1;
+        }
+
+        main div:hover img {
+            filter: blur(25px);
+        }
+
+        main div:hover::before {
+            opacity: 1;
+        }
+        
+        #biosimg {
+            width: auto;
+            height: 500px;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>The 1893 Chicago World Fair</h1>
+        <p>This website is completely coded by William Klein. Let Me Know What You Think :)</p>
+    </header>
+    <main class="categories">
+        <span class="catSpan"><b>Categories</b></span>
+        <div alt="Pictures of the fair">
+            <img src="https://tse4.mm.bing.net/th?id=OIP.Hu-j_tXCB3MOpN5qHvY0PQHaGB&pid=Api&P=0&h=220" alt="img_1">
+        </div>
+        <div alt="New Foods And Items">
+            <img src="https://www.thoughtco.com/thmb/CqVy_oOJCz4Y0qxRLLw0TYLC2Dk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/15261437581_5494b03c68_k-8a5783c7382042c3a912fbe45bff1bfd.jpg" alt="img_2">
+        </div>
+        <div alt="Biographies">
+            <img id="biosimg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Sol_Bloom_1923.jpg/220px-Sol_Bloom_1923.jpg" alt="img_3">
+        </div>
+        <div id="gotoCitations" alt="Citations">
+            <img src="https://i.postimg.cc/NjSyNYv6/Screenshot-2024-11-13-203422.png" alt="img_4">
+        </div>
+    </main>
+
+    <script>
+        const categoriesDivs = document.querySelectorAll('main div');
+        const body = document.body;
+        const header = document.querySelector('header');
+        const catSpan = document.querySelector('.catSpan');
+        const fadeHeight = header.offsetHeight;
+        const gotoCitations = document.querySelector('#gotoCitations');
+
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            const opacity = Math.max(1 - scrollY / fadeHeight, 0); 
+
+            body.style.background = `linear-gradient(
+                to bottom, 
+                rgba(22, 22, 22, ${opacity}), 
+                rgba(91, 91, 91, ${opacity * 0.8}), 
+                rgba(91, 91, 91, 0) 
+            )`;
+            
+            const grayValue = Math.min((scrollY / fadeHeight) * 255, 255); 
+            catSpan.style.color = `rgb(${255 - grayValue}, ${255 - grayValue}, ${255 - grayValue})`; 
+        });
+    
+        categoriesDivs.forEach((div, index) => {
+            div.addEventListener('click', () => {
+                const urls = [
+                    'images.html',
+                    'foods.html',
+                    'biographies.html',
+                    'https://docs.google.com/document/d/1zcGMiy-COK2VMlWtj7g19Qn-KnYASn5K58T2EtdtOvk/edit?tab=t.0'
+                ];
+                if (urls[index]) window.open(urls[index], '_blank');
+            });
+        });
+    </script>
+</body>
+</html>
